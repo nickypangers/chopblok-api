@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Pumpkin Pie",
+        "description": "A delicious pumpkin pie recipe",
+        "imageUrl": "https://www.allrecipes.com/thmb/CQrgVw7qjs2QQfKqy0GMerfppsM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229932-Simple-Pumpkin-Pie-vat-hero-4x3-LSH-ae211272471a4e7aa9f10716cdcf4bc3.jpg",
+        "durationInMinutes": 60
+    },
+    {
+        "title": "Lobster Bisque",
+        "description": "A delicious lobster bisque recipe",
+        "imageUrl": "https://www.tastingtable.com/img/gallery/rich-and-creamy-lobster-bisque-recipe/l-intro-1688145019.jpg",
+        "durationInMinutes": 120
+    }
+]

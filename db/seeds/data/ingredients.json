@@ -1,0 +1,102 @@
+{
+    "Pumpkin Pie": [
+        {
+            "name": "Salt",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Pepper",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Sugar",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Flour",
+            "quantity": "1 cup"
+        },
+        {
+            "name": "Butter",
+            "quantity": "1 stick"
+        },
+        {
+            "name": "Eggs",
+            "quantity": "2"
+        },
+        {
+            "name": "Milk",
+            "quantity": "1 cup"
+        },
+        {
+            "name": "Baking Powder",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Baking Soda",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Vanilla Extract",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Cinnamon",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Nutmeg",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Ginger",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Cloves",
+            "quantity": "1 tsp"
+        },
+        {
+            "name": "Pumpkin",
+            "quantity": "1 can"
+        },
+        {
+            "name": "Pie Shell",
+            "quantity": "1"
+        }
+    ],
+    "Lobster Bisque": [
+        {
+            "name": "Lobster Shells",
+            "quantity": "1 lb"
+        },
+        {
+            "name": "Onion",
+            "quantity": "1"
+        },
+        {
+            "name": "Carrot",
+            "quantity": "1"
+        },
+        {
+            "name": "Celery",
+            "quantity": "1"
+        },
+        {
+            "name": "Tomato Paste",
+            "quantity": "1 tbsp"
+        },
+        {
+            "name": "Brandy",
+            "quantity": "1 tbsp"
+        },
+        {
+            "name": "Stock",
+            "quantity": "1 qt"
+        },
+        {
+            "name": "Cream",
+            "quantity": "1 cup"
+        }
+    ]
+}

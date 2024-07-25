@@ -1,0 +1,58 @@
+{
+    "Pumpkin Pie": [
+        {
+            "order": 1,
+            "description": "Preheat oven to 425°F. Whisk together sugar, salt, and spices in a small bowl. Beat eggs in a large bowl. Stir in pumpkin and sugar-spice mixture. Gradually stir in evaporated milk."
+        },
+        {
+            "order": 2,
+            "description": "Pour into pie shell."
+        },
+        {
+            "order": 3,
+            "description": "Bake for 15 minutes. Reduce temperature to 350°F; bake for 40 to 50 minutes or until knife inserted near center comes out clean. Cool on wire rack for 2 hours. Serve immediately or refrigerate."
+        }
+    ],
+    "Lobster Bisque": [
+        {
+            "order": 1,
+            "description": "In a large pot, melt 1 tablespoon butter over medium heat. Add lobster shells and cook, stirring occasionally, until shells are bright red, about 5 minutes."
+        },
+        {
+            "order": 2,
+            "description": "Add onion, carrot, and celery and cook, stirring occasionally, until vegetables are soft, about 5 minutes."
+        },
+        {
+            "order": 3,
+            "description": "Add tomato paste and cook, stirring occasionally, until paste is brick red, about 2 minutes."
+        },
+        {
+            "order": 4,
+            "description": "Add brandy and cook, stirring occasionally, until alcohol has cooked off, about 2 minutes."
+        },
+        {
+            "order": 5,
+            "description": "Add stock and bring to a boil. Reduce heat and simmer until flavors have melded, about 30 minutes."
+        },
+        {
+            "order": 6,
+            "description": "Strain stock through a fine-mesh sieve into a clean pot, pressing on solids to extract as much liquid as possible; discard solids."
+        },
+        {
+            "order": 7,
+            "description": "In a large pot, melt remaining 2 tablespoons butter over medium heat. Add flour and cook, stirring occasionally, until mixture is pale golden, about 5 minutes."
+        },
+        {
+            "order": 8,
+            "description": "Slowly whisk in strained stock and bring to a boil. Reduce heat and simmer until thickened, about 10 minutes."
+        },
+        {
+            "order": 9,
+            "description": "Add cream and simmer until soup is thickened and flavors have melded, about 10 minutes."
+        },
+        {
+            "order": 10,
+            "description": "Season with salt and pepper. Serve immediately."
+        }
+    ]
+}

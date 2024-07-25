@@ -1,0 +1,12 @@
+[
+    {
+        "username": "some.randomfoodie",
+        "email": "some.randomfoodie@gg.com",
+        "passwordHash": "password_hash"
+    },
+    {
+        "username": "falegria",
+        "email": "fakeg@bbq.io",
+        "passwordHash": "password_hash"
+    }
+]
