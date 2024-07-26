@@ -2,6 +2,7 @@ import { index, integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg
 import roles from "./roles";
 import { relations } from "drizzle-orm";
 import recipes from "./recipes";
+import likes from "./likes";
 
 const users = pgTable("users", {
     id: serial('id').primaryKey(),
@@ -23,7 +24,8 @@ export const usersRelations = relations(users, ({ one, many }) => ({
     }),
     recipes: many(recipes, {
         relationName: 'recipe_author',
-    })
+    }),
+    likes: many(likes),
 }))
 
 export default users;

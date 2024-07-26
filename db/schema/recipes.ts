@@ -4,6 +4,7 @@ import categories from "./categories";
 import { relations } from "drizzle-orm";
 import ingredients from "./ingredients";
 import steps from "./steps";
+import likes from "./likes";
 
 const recipes = pgTable('recipes', {
     id: serial('id').primaryKey(),
@@ -34,6 +35,7 @@ export const recipesRelations = relations(recipes, ({ one, many }) => ({
     steps: many(steps, {
         relationName: 'recipe_steps',
     }),
+    likes: many(likes),
 }))
 
 export default recipes;

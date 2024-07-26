@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import usersRoute from "./routes/usersRoute";
 import recipesRoute from "./routes/recipesRoute";
+import categoriesRoute from "./routes/categoriesRoute";
 
 
 
@@ -27,5 +28,6 @@ const app = new Hono();
 app.get('/', (c) => c.text('Testing'));
 app.route('/users', usersRoute);
 app.route('/recipes', recipesRoute);
+app.route('/categories', categoriesRoute);
 
 export default app;
