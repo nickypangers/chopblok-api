@@ -10,6 +10,7 @@ const recipes = pgTable('recipes', {
     id: serial('id').primaryKey(),
     authorId: integer('author_id').notNull().references(() => users.id),
     title: text('title').notNull(),
+    subtitle: text('subtitle').default(''),
     description: text('description').notNull(),
     imageUrl: text('image_url').notNull(),
     categoryId: integer('category_id').notNull().references(() => categories.id),

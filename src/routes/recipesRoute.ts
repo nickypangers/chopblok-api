@@ -1,5 +1,5 @@
 import db from "$/db";
-import { eq } from "drizzle-orm";
+import { and, eq, ilike } from "drizzle-orm";
 import { Hono } from "hono";
 import { likes, recipes } from "$/db/schema";
 import { z } from "zod";
@@ -25,6 +25,53 @@ recipesRoute
         });
         return c.json({ data: recipes });
     })
+
+recipesRoute.get('/search', async (c) => {
+    const query = c.req.query();
+
+    console.log(query);
+
+    if (Object.keys(query).length == 0) {
+        let recipes = await db.query.recipes.findMany({
+            with: {
+                ingredients: true,
+                steps: true,
+                author: true,
+                category: true,
+                likes: true,
+            }
+        });
+        return c.json({ data: recipes });
+    }
+
+    let { keyword, authorId, categoryId, recipeType, timeRange } = query;
+
+    let filterArray = [];
+    if (keyword) {
+        filterArray.push(ilike(recipes.title, `%${keyword}%`));
+    }
+    if (authorId && !isNaN(Number(authorId))) {
+        filterArray.push(eq(recipes.authorId, Number(authorId)));
+    }
+    if (categoryId && !isNaN(Number(categoryId))) {
+        filterArray.push(eq(recipes.categoryId, Number(categoryId)));
+    }
+
+
+
+    let result = await db.query.recipes.findMany({
+        where: and(...filterArray),
+        with: {
+            ingredients: true,
+            steps: true,
+            author: true,
+            category: true,
+            likes: true,
+        },
+    })
+
+    return c.json({ data: result });
+})
 
 recipesRoute.get('/:id', async (c) => {
     let { id } = c.req.param();

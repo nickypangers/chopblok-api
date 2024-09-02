@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS "ingredients" (
 	"recipe_id" integer NOT NULL,
 	"name" text NOT NULL,
 	"quantity" text NOT NULL,
+	"image_url" text,
 	CONSTRAINT "ingredients_recipe_id_name_unique" UNIQUE("recipe_id","name")
 );
 --> statement-breakpoint
@@ -22,6 +23,7 @@ CREATE TABLE IF NOT EXISTS "recipes" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"author_id" integer NOT NULL,
 	"title" text NOT NULL,
+	"subtitle" text DEFAULT '',
 	"description" text NOT NULL,
 	"image_url" text NOT NULL,
 	"category_id" integer NOT NULL,
@@ -34,6 +36,14 @@ CREATE TABLE IF NOT EXISTS "roles" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	CONSTRAINT "roles_name_unique" UNIQUE("name")
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "sessions" (
+	"user_id" integer PRIMARY KEY NOT NULL,
+	"token" uuid DEFAULT gen_random_uuid(),
+	"refresh_token" uuid DEFAULT gen_random_uuid(),
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"expires_at" timestamp DEFAULT NOW() + interval '1 hour' NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "steps" (

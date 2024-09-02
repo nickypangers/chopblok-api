@@ -1,6 +1,6 @@
 {
-  "id": "473164f2-3f49-4f99-b810-def7f8d25414",
-  "prevId": "92b40369-c900-4437-a279-1fa77ca27ba2",
+  "id": "9d7560e4-2a80-4201-b671-eb9a6031f07b",
+  "prevId": "19dcb1b8-418d-42b3-a5c3-ab3c21c1c7d9",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -192,6 +192,13 @@
           "primaryKey": false,
           "notNull": true
         },
+        "subtitle": {
+          "name": "subtitle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "''"
+        },
         "description": {
           "name": "description",
           "type": "text",
@@ -308,6 +315,50 @@
           ]
         }
       }
+    },
+    "public.sessions": {
+      "name": "sessions",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "token": {
+          "name": "token",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "gen_random_uuid()"
+        },
+        "refresh_token": {
+          "name": "refresh_token",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false,
+          "default": "gen_random_uuid()"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "NOW() + interval '1 hour'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "public.steps": {
       "name": "steps",

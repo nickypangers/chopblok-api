@@ -3,6 +3,7 @@ import { z } from "zod";
 import usersRoute from "./routes/usersRoute";
 import recipesRoute from "./routes/recipesRoute";
 import categoriesRoute from "./routes/categoriesRoute";
+import authRoute from "./routes/authRoute";
 
 
 
@@ -29,5 +30,6 @@ app.get('/', (c) => c.text('Testing'));
 app.route('/users', usersRoute);
 app.route('/recipes', recipesRoute);
 app.route('/categories', categoriesRoute);
+app.route('/auth', authRoute);
 
 export default app;
